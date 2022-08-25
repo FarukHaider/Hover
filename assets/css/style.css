@@ -395,6 +395,7 @@ textarea.form-control:focus {
   display: flex;
   align-items: end;
   margin-bottom: 20px;
+  transition: all 0.8s ease;
 }
 
 .icon_box_content:hover .overlay {
