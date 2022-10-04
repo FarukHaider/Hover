@@ -1,0 +1,197 @@
+.icon_box{
+    position: relative;
+    a{
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        position: relative;
+        .icon_box_middle{
+            top: 50%;
+            position: absolute;
+            z-index: 99;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+            transition: all 1s ease;
+            img{
+                transform: translateY(-10px);
+                transition: all 1s ease;
+            }
+        }
+    }
+    &:hover{
+       .icon_box_middle{
+        opacity: 1;
+        img{
+            transform: translateY(0); 
+        }
+       } 
+    }
+}
+.icon_box2{
+    img{
+        border-radius: 10px;
+    }
+    .icon_box_content{
+            transform: translateY(100px);
+            position: absolute;
+            bottom: 0;
+            opacity: 0;
+            padding: 30px;
+            transition: all 1.5s ease-in-out;
+            i{
+                transition: all .5s ease-in-out;
+                font-size: 70px;
+                &:hover{
+                    font-size: 80px;
+                }
+            }
+        }
+        &:hover{            
+            .icon_box_content{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        h5{
+            transition: all .5s ease-in-out;
+            &:hover{
+                color: red;
+            }
+        }
+}
+.plus_icon{
+    text-align: right;
+    i{
+        font-size: 80px;
+        color: red;
+        margin-right: 50px;
+    }
+    &:hover{
+        i{
+            font-size: 90px;
+            color: blue;
+        }
+    }
+}
+.icon_box3{
+    a{
+        display: block;
+    }
+    .icon_box_content{
+        background: $white-color;
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: all .5s ease-in-out;
+    }
+    &:hover{
+        .icon_box_content{  
+            opacity: 1;          
+            transform: translateY(-50%);
+        }
+    }
+}
+.icon_box_content_left{
+    a{
+        width: 55px;
+        height: 55px;
+        background: $primary-color;
+        color: $white-color;
+        line-height: 40px;
+    }
+}
+.icon_box4{
+    position: relative;
+    a{
+        display: block;
+    }
+    .icon_box_content{
+        position: relative;
+        background: $white-color;
+        width: 90%;
+        margin: 0 auto;
+        padding: 18px 15px 15px;
+        border-radius: 5px;
+        text-align: center;
+        transform: translateY(-100%);
+        transition: all .5s ease-in-out;
+        &::before{
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid $white-color;
+            z-index: 9;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &:hover{   
+        .icon_box_content{
+            transform: translateY(-130%);
+            &::before{
+                border-bottom: 8px solid rgb(255, 96, 108);
+            }
+            .gradiant_color{
+                opacity: 1;
+                transform: scale(1,1);
+            }
+        }  
+        .social_icon{
+            .rotate_icon{
+                transform: rotate(45deg);
+            }
+        }
+        .social_icon_list{
+            top: 65px;
+            opacity: 1;
+        }
+        a{
+            img{
+                filter: grayscale(100%);
+            }
+        }
+    }
+    .social_icon{    
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 2;
+        bottom: 20px;
+        border-radius: 50px;
+        .rotate_icon{
+            position: relative;
+            top: 17px;
+            right: 20px;
+            background: #fff;
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            z-index: 99;
+        }
+    }
+    .social_icon_list{
+        position: absolute;
+        top: 10px;
+        right: 20px;     
+        opacity: 0;   
+        transition: all .2s ease-in-out;
+        a{
+            background: $white-color;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 100%;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+    }
+}

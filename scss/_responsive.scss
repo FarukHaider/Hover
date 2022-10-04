@@ -1,0 +1,34 @@
+@media screen and (min-width: 992px) {
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+}
+
+/*-- max-width: 1199px--*/
+@media screen and (max-width: 1345px) {
+}
+/*-- max-width: 1199px--*/
+@media screen and (max-width: $breakpoint-largedesktop) {
+}
+
+/*-- max-width: 991px--*/
+@media screen and (max-width: $breakpoint-desktop) {
+}
+/*-- End max-width: 991px--*/
+
+
+/*-- max-width: 767px--*/
+@media screen and (max-width: $breakpoint-tablet) {
+    
+}
+/*-- End max-width: 767px--*/
+
+/*-- max-width: 600px--*/
+@media screen and (max-width: $breakpoint-mobile) {
+
+}
+
+/*-- max-width: 500px--*/
+@media screen and (max-width: 450px) {
+}
+
+

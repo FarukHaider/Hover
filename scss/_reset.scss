@@ -1,0 +1,53 @@
+html {
+    scroll-behavior: smooth;
+}
+body{
+    position: relative;
+    font-family: $paragraph-font;
+    font-size: $font-16;
+    line-height: 30px;
+    color: $primary-color;
+    overflow-x: hidden;
+    webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.main_wrapper{
+    position: relative;
+}
+img{
+    width: 100%;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: $heading-font;
+    font-weight: $font-semibold;
+    margin: 0px;
+}
+h1{
+    font-size: $font-36;
+}
+h2{
+    font-size: $font-30; 
+}
+h3{
+    font-size: $font-24;
+}
+h4{
+    font-size: $font-20;
+}
+h5{
+    font-size: $font-18;
+}
+h6{
+    font-size: $font-16;
+}
+
+p{
+    margin-bottom: 0px;
+    font-family: $paragraph-font;
+}
+.btn-check:focus+.btn, .btn:focus{
+    box-shadow: 0;
+}
+a{
+    text-decoration: none;
+}

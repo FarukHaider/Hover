@@ -1,0 +1,349 @@
+/*
+    [ Shortcode Stylesheet ]
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    Theme Name: Locksmith - Locksmith Template
+    Version: 1.0
+    Author: WPThemeBooster
+    Author URI: www.wpthemebooster.com
+    Description: This template usable to build website for Blogging.
+    Date: 12/07/2020
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+#01  Fonts and Other Styles Import
+#02  Theme Reset Style
+#03  Others
+-----------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;600;700;800;900&display=swap");
+@import url("fonts/ionicons/css/ionicons.css");
+@import url("fonts/font-awesome/css/font-awesome.css");
+@import url("bootstrap.min.css");
+@import url("animate.min.css");
+.overlay {
+  position: absolute; /* Sit on top of the page content */
+  opacity: 0; /* Hidden by default */
+  width: 0; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg, #00d3fb 0%, #ff01fa 100%); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  transition: all 0.8s ease-in-out;
+}
+
+a {
+  position: relative;
+}
+a:hover .overlay {
+  left: 0;
+  opacity: 0.8;
+  right: auto;
+  width: 100%;
+}
+a:hover .overlay2 {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-animation: 0.5s ease-in-out 0s normal none 1 running slideInDown;
+          animation: 0.5s ease-in-out 0s normal none 1 running slideInDown;
+}
+
+.overlay2 {
+  position: absolute;
+  background: #ffffff;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border-radius: 5px;
+  opacity: 0;
+  top: 10px;
+  left: 10px;
+  transform: translateY(100%);
+  z-index: 11;
+  cursor: pointer;
+  -webkit-animation: 0.5s ease-in-out 0s normal none 1 running slideOutDown;
+          animation: 0.5s ease-in-out 0s normal none 1 running slideOutDown;
+  transition: all 0.5s ease-in-out;
+}
+
+.gradiant_color {
+  border-radius: 5px;
+  position: absolute;
+  background: linear-gradient(to left, rgb(255, 96, 108) 0%, rgb(252, 152, 55) 100%);
+  opacity: 0;
+  transform: scale(1, 0.4);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  color: #462b34;
+  overflow-x: hidden;
+  webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main_wrapper {
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  margin: 0px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 0px;
+  font-family: "Nunito", sans-serif;
+}
+
+.btn-check:focus + .btn, .btn:focus {
+  box-shadow: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon_box {
+  position: relative;
+}
+.icon_box a {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.icon_box a .icon_box_middle {
+  top: 50%;
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 1s ease;
+}
+.icon_box a .icon_box_middle img {
+  transform: translateY(-10px);
+  transition: all 1s ease;
+}
+.icon_box:hover .icon_box_middle {
+  opacity: 1;
+}
+.icon_box:hover .icon_box_middle img {
+  transform: translateY(0);
+}
+
+.icon_box2 img {
+  border-radius: 10px;
+}
+.icon_box2 .icon_box_content {
+  transform: translateY(100px);
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  padding: 30px;
+  transition: all 1.5s ease-in-out;
+}
+.icon_box2 .icon_box_content i {
+  transition: all 0.5s ease-in-out;
+  font-size: 70px;
+}
+.icon_box2 .icon_box_content i:hover {
+  font-size: 80px;
+}
+.icon_box2:hover .icon_box_content {
+  transform: translateY(0);
+  opacity: 1;
+}
+.icon_box2 h5 {
+  transition: all 0.5s ease-in-out;
+}
+.icon_box2 h5:hover {
+  color: red;
+}
+
+.plus_icon {
+  text-align: right;
+}
+.plus_icon i {
+  font-size: 80px;
+  color: red;
+  margin-right: 50px;
+}
+.plus_icon:hover i {
+  font-size: 90px;
+  color: blue;
+}
+
+.icon_box3 a {
+  display: block;
+}
+.icon_box3 .icon_box_content {
+  background: #ffffff;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.icon_box3:hover .icon_box_content {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.icon_box_content_left a {
+  width: 55px;
+  height: 55px;
+  background: #462b34;
+  color: #ffffff;
+  line-height: 40px;
+}
+
+.icon_box4 {
+  position: relative;
+}
+.icon_box4 a {
+  display: block;
+}
+.icon_box4 .icon_box_content {
+  position: relative;
+  background: #ffffff;
+  width: 90%;
+  margin: 0 auto;
+  padding: 18px 15px 15px;
+  border-radius: 5px;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
+}
+.icon_box4 .icon_box_content::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #ffffff;
+  z-index: 9;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon_box4:hover .icon_box_content {
+  transform: translateY(-130%);
+}
+.icon_box4:hover .icon_box_content::before {
+  border-bottom: 8px solid rgb(255, 96, 108);
+}
+.icon_box4:hover .icon_box_content .gradiant_color {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.icon_box4:hover .social_icon .rotate_icon {
+  transform: rotate(45deg);
+}
+.icon_box4:hover .social_icon_list {
+  top: 65px;
+  opacity: 1;
+}
+.icon_box4:hover a img {
+  filter: grayscale(100%);
+}
+.icon_box4 .social_icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 2;
+  bottom: 20px;
+  border-radius: 50px;
+}
+.icon_box4 .social_icon .rotate_icon {
+  position: relative;
+  top: 17px;
+  right: 20px;
+  background: #fff;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  z-index: 99;
+}
+.icon_box4 .social_icon_list {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.icon_box4 .social_icon_list a {
+  background: #ffffff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 100%;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+/*-- max-width: 1199px--*/
+/*-- max-width: 1199px--*/
+/*-- max-width: 991px--*/
+/*-- End max-width: 991px--*/
+/*-- max-width: 767px--*/
+/*-- End max-width: 767px--*/
+/*-- max-width: 600px--*/
+/*-- max-width: 500px--*//*# sourceMappingURL=style.css.map */

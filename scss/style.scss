@@ -1,0 +1,41 @@
+@charset "utf-8";
+/*
+    [ Shortcode Stylesheet ]
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    Theme Name: Locksmith - Locksmith Template
+    Version: 1.0
+    Author: WPThemeBooster
+    Author URI: www.wpthemebooster.com
+    Description: This template usable to build website for Blogging.
+    Date: 12/07/2020
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+#01  Fonts and Other Styles Import
+#02  Theme Reset Style
+#03  Others
+-----------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;600;700;800;900&display=swap');
+@import url('fonts/ionicons/css/ionicons.css');
+@import url('fonts/font-awesome/css/font-awesome.css');
+@import url('bootstrap.min.css');
+@import url('animate.min.css');
+
+@import 'variables';
+@import 'reset';
+@import 'iconbox';
+
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1170px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@import 'responsive';
